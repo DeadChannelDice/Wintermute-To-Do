@@ -1,6 +1,6 @@
 :root {
     --primary: #ff69b4;
-    --business: #41bee7;
+    --professional: #41bee7;
     --personal: var(--primary);
     --light: #d3d3d3;
     --gray: #808080;   
@@ -9,7 +9,7 @@
 
     --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
-    --business-glow: 0px 0px 4px rgb(65, 190, 231, 0.75);
+    --professional-glow: 0px 0px 4px rgb(65, 190, 231, 0.75);
     --personal-glow: 0px 0px 4px rgba(255, 105, 180, 0.75);
 }
 
@@ -118,8 +118,8 @@ input[type="checkbox"] {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 2px solid var(--business);
-    box-shadow: var(--business-glow);
+    border: 2px solid var(--professional);
+    box-shadow: var(--professional-glow);
 }
 
 .bubble.personal {
@@ -133,8 +133,8 @@ input[type="checkbox"] {
     opacity: 0%;
     width: 0px;
     height: 0px;
-    background-color: var(--business);
-    box-shadow: var(--business-glow);
+    background-color: var(--professional);
+    box-shadow: var(--professional-glow);
     border-radius: 50%;
     transition: 0.2s ease-in-out;
 }
