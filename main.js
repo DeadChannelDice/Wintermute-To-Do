@@ -174,14 +174,15 @@ function DisplayTodos() {
     }, { offset: Number.NEGATIVE_INFINITY} ).element
     }
 
-    clearBtn.addEventListener("click", () => {
-        localStorage.removeItem('todos');
-        todos = [];
-        DisplayTodos();
-    })
+    
     
 
 }
 
+console.log(todos);
 
-
+clearBtn.addEventListener("click", () => {
+    localStorage.removeItem('todos');
+    todos = [];
+    DisplayTodos();
+})
