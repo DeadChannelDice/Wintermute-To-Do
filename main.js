@@ -176,9 +176,8 @@ function DisplayTodos() {
 
     clearBtn.addEventListener("click", () => {
         localStorage.removeItem('todos');
-        setTimeout(() => {
-            DisplayTodos();
-        }, 1000);
+        todos = [];
+        DisplayTodos();
     })
     
 
