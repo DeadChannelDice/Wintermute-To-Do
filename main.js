@@ -25,6 +25,9 @@ newTodoForm.addEventListener('submit', event => {
     const todo = {
         content: event.target.elements.content.value,
         category: event.target.elements.category.value,
+        dateAdded: new Date().toLocaleString('default', {
+            weekday:'long', year: 'numeric', month: 'long', day: 'numeric'
+        }),
         done: false,
         createAt: new Date().getTime()          
     }
@@ -64,6 +67,10 @@ function DisplayTodos() {
         content.classList.add('todo-content');
         content.innerHTML = `<input type="text" value="${todo.content}" readonly>`;
 
+        const dateAdded = document.createElement('div');
+        dateAdded.classList.add('dateAdded');
+        dateAdded.innerHTML = `${todo.dateAdded}`;
+
         const actions = document.createElement('div');
         actions.classList.add('actions');
 
@@ -81,6 +88,7 @@ function DisplayTodos() {
         actions.appendChild(deleteButton);
         todoItem.appendChild(label);
         todoItem.appendChild(content);
+        todoItem.appendChild(dateAdded);
         todoItem.appendChild(actions);
         todoList.appendChild(todoItem);
 
@@ -118,4 +126,5 @@ function DisplayTodos() {
     })
 
 }
+
 

@@ -53,13 +53,58 @@
                     <div>Personal</div>
                     </label>
                 </div>
+
+                <h4>Assign Importance</h4>
+                <div class="options">
+                    <label>
+                        <input 
+                        type="radio" 
+                        name="importance" 
+                        id="category3" 
+                        value="importance-long-term"/>
+                    <span class="bubble importance"></span>
+                    <div>Important Long Term</div>
+                    </label>
+
+                    <label>
+                        <input 
+                        type="radio" 
+                        name="importance" 
+                        id="category4" 
+                        value="urgent"/>
+                    <span class="bubble urgent"></span>
+                    <div>Urgent</div>
+                    </label>
+
+                    <label>
+                        <input 
+                        type="radio" 
+                        name="importance" 
+                        id="category5" 
+                        value="importance"/>
+                    <span class="bubble importance"></span>
+                    <div>Important</div>
+                    </label>
+
+                    <label>
+                        <input 
+                        type="radio" 
+                        name="importance" 
+                        id="category6" 
+                        value="urgent"/>
+                    <span class="bubble urgent"></span>
+                    <div>Urgent</div>
+                    </label>
+                </div>
+
+                
                 <input type="submit" value="Add Todo"/>
             </form>
         </section>
 
         <section class="todo-list">
             <h3>TODO LIST</h3>
-            <div class="list" id="todo-list">
+            <div class="list container" id="todo-list">
                 <!-- <div class="todo-item done">
                     <label>
                         <input type="checkbox"/>
@@ -68,6 +113,10 @@
 
                     <div class="todo-content">
                         <input type="text" value="Build a Javacript App" readonly />
+                    </div>
+
+                    <div class="dateAdded">
+                        Sunday, April 16, 2023
                     </div>
 
                     <div class="actions">
