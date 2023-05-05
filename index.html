@@ -4,108 +4,118 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="main.css"/> -->
+    <link rel="stylesheet" href="main.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
     <title>Wintermute To-Do App</title>
 </head>
 <body>
+    <main class="full-app">
 
-    <main class="app">
+        <section class="task-app">
 
-        <section class="greeting">
-            <h2 class="title">
-                What's up, <input type="text" id="name" placeholder="Name here">
-            </h2>
-        </section>
+            <section class="greeting">
+                <h2 class="title">
+                    What's up, <input type="text" id="name" placeholder="Name here">
+                </h2>
+            </section>
 
-        <section class="create-todo">
-            <h3>CREATE A TODO</h3>
+            <section class="create-todo">
+                <h3>CREATE A TODO</h3>
 
-            <form id="new-todo-form">
-                <h4>What's on your todo list?</h4>
-                <input 
-                    type="text" 
-                    name="content" 
-                    id="content" 
-                    placeholder="Take over the world..."/> 
+                <form id="new-todo-form">
+                    <h4>What's on your todo list?</h4>
+                    <input 
+                        type="text" 
+                        name="content" 
+                        id="content" 
+                        placeholder="Take over the world..."/> 
 
-                <h4>Pick a Category</h4>
-                <div class="options">
-                    <label>
-                        <input 
-                        type="radio" 
-                        name="category" 
-                        id="category1" 
-                        value="professional"/>
-                    <span class="bubble professional"></span>
-                    <div>Professional</div>
-                    </label>
-
-                    <label>
-                        <input 
-                        type="radio" 
-                        name="category" 
-                        id="category2" 
-                        value="personal"/>
-                    <span class="bubble personal"></span>
-                    <div>Personal</div>
-                    </label>
-                </div>
-
-                
-                <input type="submit" value="Add Todo"/>
-            </form>
-        </section>
-
-        <section class="todo-list">
-            <h3>TODO LIST</h3>
-            <div class="list container" id="todo-list">
-                <!-- <div class="todo-item done">
-                    <label>
-                        <input type="checkbox"/>
+                    <h4>Pick a Category</h4>
+                    <div class="options">
+                        <label>
+                            <input 
+                            type="radio" 
+                            name="category" 
+                            id="category1" 
+                            value="professional"/>
                         <span class="bubble professional"></span>
-                    </label>
+                        <div>Professional</div>
+                        </label>
 
-                    <div class="todo-content">
-                        <input type="text" value="Build a Javacript App" readonly />
-                    </div>
-
-                    <div class="dateAdded">
-                        Sunday, April 16, 2023
-                    </div>
-
-                    <div class="actions">
-                        <button class="edit">Edit</button>
-                        <button class="delete">Delete</button>
-                    </div>
-                </div>
-
-                <div class="todo-item">
-                    <label>
-                        <input type="checkbox"/>
+                        <label>
+                            <input 
+                            type="radio" 
+                            name="category" 
+                            id="category2" 
+                            value="personal"/>
                         <span class="bubble personal"></span>
-                    </label>
-
-                    <div class="todo-content">
-                        <input type="text" value="Do Laundry" readonly />
+                        <div>Personal</div>
+                        </label>
                     </div>
 
-                    <div class="actions">
-                        <button class="edit">Edit</button>
-                        <button class="delete">Delete</button>
+                    
+                    <input type="submit" value="Add Todo"/>
+                </form>
+            </section>
+
+            <section class="todo-list">
+                <h3>TODO LIST</h3>
+                <div class="list container" id="todo-list">
+                    <!-- <div class="todo-item done">
+                        <label>
+                            <input type="checkbox"/>
+                            <span class="bubble professional"></span>
+                        </label>
+
+                        <div class="todo-content">
+                            <input type="text" value="Build a Javacript App" readonly />
+                        </div>
+
+                        <div class="dateAdded">
+                            Sunday, April 16, 2023
+                        </div>
+
+                        <div class="actions">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
                     </div>
-                </div> -->
-            </div>
-            <button class="button" id="saveBtn">Save</button>
-            <button class="button" id="clearBtn">Clear List</button>
+
+                    <div class="todo-item">
+                        <label>
+                            <input type="checkbox"/>
+                            <span class="bubble personal"></span>
+                        </label>
+
+                        <div class="todo-content">
+                            <input type="text" value="Do Laundry" readonly />
+                        </div>
+
+                        <div class="actions">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div> -->
+                </div>
+                <button class="button" id="saveBtn">Save</button>
+                <button class="button" id="clearBtn">Clear List</button>
+            </section>
+
         </section>
-
+        <section class="calendar-app">
+            <div class="header">
+                <button class="navigation" onclick="previousMonth()">&lt;</button>
+                <h1 id="month"></h1>
+                <button class="navigation" onclick="nextMonth()">&gt;</button>
+            </div>
+            <div id="container">
+                <div id="calendar"></div>
+            </div>
+        </section>
     </main>
-    <section class="calendar">
-        Calendar Content
-    </section>
+
     
     <script src="main.js"></script>
 </body>
