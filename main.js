@@ -238,7 +238,7 @@ let currentYear = today.getFullYear();
 //  loadEvents();
 
 const drawBlankCalendar = () => {
-   for(let i = 0; i < 371; i++) {
+   for(let i = 0; i < 42; i++) {
        const day = document.createElement('div');
        day.classList.add('day');
        
@@ -337,7 +337,7 @@ const nextMonth = () => {
 const load = async () => {
    // await loadEvents();
    drawBlankCalendar();
-   updateCalendar(0, currentYear, events);   
+   updateCalendar(currentMonth, currentYear, events);   
      
 }
 

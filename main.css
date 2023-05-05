@@ -1,3 +1,19 @@
+:root {
+    --primary: #ff69b4;
+    --professional: #41bee7;
+    --personal: var(--primary);
+    --white: white;
+    --light: #d3d3d3;
+    --gray: #808080;   
+    --dark: #4d4d4d;
+    --danger: #ff0000;
+
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    --professional-glow: 0px 0px 4px rgb(65, 190, 231, 0.75);
+    --personal-glow: 0px 0px 4px rgba(255, 105, 180, 0.75);
+}
+
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
@@ -29,30 +45,7 @@
     isolation: isolate;
   }
 
-:root {
-    --primary: #ff69b4;
-    --professional: #41bee7;
-    --personal: var(--primary);
-    --white: white;
-    --light: #d3d3d3;
-    --gray: #808080;   
-    --dark: #4d4d4d;
-    --danger: #ff0000;
-
-    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-
-    --professional-glow: 0px 0px 4px rgb(65, 190, 231, 0.75);
-    --personal-glow: 0px 0px 4px rgba(255, 105, 180, 0.75);
-}
-
-
-
-* {
-    font-family: montserrat, sans-serif;
-    margin: 0px;
-    padding: 0px;
-    /* border: red solid 1px; */
-}
+/* Reset Complete */
 
 input:not([type="radio"]):not([type="checkbox"]), button {
     appearance: none;
@@ -63,9 +56,21 @@ input:not([type="radio"]):not([type="checkbox"]), button {
     width: 100%;
 }
 
+* {
+    font-family: montserrat, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    /* border: red solid 1px; */
+}
+
 body {
     background: var(--light);
     color: var(--dark);
+}
+
+main {
+    display: flex;
+    
 }
 
 section {
@@ -328,8 +333,6 @@ button.navigation:hover {
 #container {
     display: flex;
     height: 1000px;
-    overflow: hidden;
-    overflow-y: scroll;
 }
 
 
